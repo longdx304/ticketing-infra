@@ -16,6 +16,8 @@ spec:
         - name: orders
           image: longdx/orders
           env:
+            - name: RESERVATION_EXPIRATION_WINDOW_SECONDS
+              value: '900'
             - name: NATS_CLUSTER_ID
               value: ticketing
             - name: NATS_CLIENT_ID
